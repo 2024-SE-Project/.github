@@ -19,7 +19,7 @@
 ✹  **Git Branch 사용법**
 
 - 각자 생성한 브랜치에서만 작업합니다. (브랜치 생성은 Issue 사용법 참고)
-- 브랜치 이름 구조는 <**본인이름_타입/#이슈번호**> 입니다. (ex. haeun_feat/#1)
+- 브랜치 이름 구조는 <**본인이름_타입/#이슈번호**> 입니다. (ex. ehdrb01_feat/#1)
 <br />
 <br />
 
@@ -54,7 +54,7 @@ ex)style : 텍스트 디자인시스템 구축
 | add | asset 파일(이미지, 아이콘 등) 추가 | add : 위젯 이미지 추가 |
 | chore | 파일, 경로를 옮기거나 이름 변경 | chore : feet -> feat 이름 변경 |
 | delete | 덤프 파일 삭제 | delete : Empty.md 파일 삭제 |
-| merge | 브랜치 병합(merge) | merge : pull request #3 from LikeLionHGU/Haeun_Style/#1 |
+| merge | 브랜치 병합(merge) | merge : pull request #3 from ehdrb01_style/#1 |
 | fix | 버그 픽스 | fix : Color 버그 수정 |
 | docs | 문서 작업 | docs : Readme 작성 |
 | refactor | 코드 리팩토링 | refactor : 변수명 수정 |
