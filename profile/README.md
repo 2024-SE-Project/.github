@@ -69,4 +69,4 @@ ex)style : 텍스트 디자인시스템 구축
 
 ✹  Pull Request 제목 작성법
 
-이름_타입/#이슈번호 → 풀 시킬 브랜치 (ex. Hani_Style/#1 -> dev)
+이름_타입/#이슈번호 → 풀 시킬 브랜치 (ex. ehdrb01_style/#1 -> dev)
