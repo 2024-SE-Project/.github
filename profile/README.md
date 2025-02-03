@@ -1,72 +1,239 @@
+# **RAONz: Handong Team Meeting Archiving and Exchange Web Platform** 🚀
 
+> A web-based platform designed to enhance collaboration, documentation, and engagement within Handong University's Residential Colleges (RCs).
+> 
 
+## **📌 Project Overview**
 
-## 1. 이슈 작성하기
+### **🛠 Introduction**
 
-✹ **Git Issue 사용법**
+Handong University hosts a variety of **Residential Colleges (RCs)**, where numerous **team meetings** take place regularly. These meetings play a **crucial role in fostering community and collaboration** among students. However, the current system presents several challenges:
 
-- 작업할 기능에 대한 issue를 작성합니다.
-- issue 제목은 **[타입] - 설명**으로 통일합니다. (ex. [Style] - 텍스트 스타일 추가)
-- Assignees에는 작업을 맡은 사람을 태그합니다.
-- Labels에는 해당 작업과 맞는 유형을 태그합니다.
-- 설명란에는 어떤 작업을 할 예정인지, 관련된 이슈번호가 있는지 참고한 내용이 있는지 등 필요한 내용을 적습니다.
-- 이렇게 issue를 생성하게 되면 #N의 이슈 번호가 생깁니다.
-<br />
-<br />
+- 🔴 **Lack of interaction** between different teams and RCs.
+- 🔴 **Limited guidance for team leaders**, making leadership overwhelming.
+- 🔴 **No centralized archiving system**, leading to loss of important meeting records.
 
-## 2. 브랜치 만들기
+### **🔍 Solution**
 
-✹  **Git Branch 사용법**
+RAONz provides a **web-based platform** that:
+✔️ Facilitates **seamless communication and collaboration** across teams.
 
-- 각자 생성한 브랜치에서만 작업합니다. (브랜치 생성은 Issue 사용법 참고)
-- 브랜치 이름 구조는 <**본인이름_타입/#이슈번호**> 입니다. (ex. ehdrb01_feat/#1)
-<br />
-<br />
+✔️ Provides **guidance and resources** for team leaders.
 
-## 3. checkout 해서 브랜치 변경
+✔️ Implements a **secure archiving system** for meeting materials.
 
-```bash
-git checkout ehdrb01/#12
-```
-<br />
-<br />
+✔️ Enhances engagement through **ranking, team matching, and interactive features**.
 
-## 4. 작업
+---
 
-- 작업 후 테스크 단위로 커밋
-- pull request를 통해 작업한 branch를 develop branch에 merge
-- 코드 리뷰한 후 merge
+## **🎯 Key Features**
 
-✹  Commit 메시지 작성법
+### **📑 Team Meeting Management**
 
-```bash
-타입 : 짧은 내용(한글로)
-feat : 로그인
-ex)style : 텍스트 디자인시스템 구축
-```
+✅ Upload and archive **meeting materials**.
 
-|  |  |  |
+✅ **Search & retrieve** past meeting records.
+
+✅ **Automated team matching** for inter-team collaboration.
+
+### **👥 Community Features**
+
+✅ **Like, save, and share** team meeting posts.
+
+✅ **RC-based ranking system** for engagement.
+
+✅ **Event-based content sharing**.
+
+### **🔐 Security & Performance**
+
+✅ **Google OAuth 2.0 authentication** for secure login.
+
+✅ **Spring Security with JWT-based authentication**.
+
+✅ **Optimized scalability with CI/CD pipeline integration**.
+
+### **📷 Multimedia Archiving**
+
+✅ **Photo gallery** for storing team snapshots.
+
+✅ **Automated content categorization and tagging**.
+
+✅ **Intuitive UI for easy browsing**.
+
+---
+
+## **⚙️ System Architecture**
+
+### **🖥 High-Level Overview**
+
+The system follows the **Model-View-Controller (MVC) architecture**, ensuring modularity and maintainability.
+
+### **🔹 Technology Stack**
+
+| Component | Technology |
+| --- | --- |
+| **Frontend** | React.js, Redux |
+| **Backend** | Spring Boot, Spring Security |
+| **Database** | MySQL |
+| **Authentication** | Google OAuth 2.0, JWT |
+| **Deployment** | AWS EC2, Docker, Jenkins |
+
+### **📌 C4 Model - System Context**
+The RAONz platform is designed based on the **C4 Model**, ensuring a structured and scalable architecture.
+
+#### **🖥️ System Overview**
+- 🟢 **Frontend**: Built with **React.js**, providing a dynamic and intuitive user interface.
+- 🟡 **Backend**: Powered by **Spring Boot**, ensuring robust API processing and business logic execution.
+- 🔴 **Database**: **MySQL**, managing user data, meeting logs, and archives.
+
+#### **📌 System Context Diagram**
+<img src="https://github.com/user-attachments/assets/07fe009f-0f4b-4946-a324-b59bd099a3ee" width=70%>
+
+#### **📌 C4 Model - Container Diagram**
+<img src="https://github.com/user-attachments/assets/e13c1e84-a91c-4647-8dd5-a7daf25bc118" width=70%>
+
+These diagrams illustrate the **interaction between users and the system**, the **data flow among key components**, and the **distribution of core application functionalities**.
+
+### **📌 Repository Pattern**
+
+- **Handles CRUD operations** efficiently.
+- **Supports modular and maintainable code structure**.
+
+### **📌 API Endpoints**
+
+| Method | Endpoint | Description |
 | --- | --- | --- |
-| type | Description | Example |
-| feat | 새로운 기능 추가, 구현 | feat : 로그인 기능 구현 |
-| edit | 단순 오타 수정 | edit : 로그인 캐시 처리 방식 수정 |
-| style | UI작업, 스타일 관련 파일 추가 및 수정 | style : 폰트 등록 |
-| add | asset 파일(이미지, 아이콘 등) 추가 | add : 위젯 이미지 추가 |
-| chore | 파일, 경로를 옮기거나 이름 변경 | chore : feet -> feat 이름 변경 |
-| delete | 덤프 파일 삭제 | delete : Empty.md 파일 삭제 |
-| merge | 브랜치 병합(merge) | merge : pull request #3 from ehdrb01_style/#1 |
-| fix | 버그 픽스 | fix : Color 버그 수정 |
-| docs | 문서 작업 | docs : Readme 작성 |
-| refactor | 코드 리팩토링 | refactor : 변수명 수정 |
-| model | 데이터베이스(모델) 작업 | model : 데이터 모델 생성 |
-| init | 프로젝트 생성 | init : 프로젝트 생성 |
-| test | 테스트 케이스 생성 | test: 테스트 케이스 생성 |
-| 빌드관련 |  |  |  
-| build | 재빌드 | build: 동일버전 재빌드(x.xx) |
-| version | 버전 업 | version : 버전(2.0.0) 업데이트 |
+| `POST` | `/auth/login` | User login |
+| `POST` | `/auth/register` | User registration |
+| `GET` | `/teams` | Retrieve all teams |
+| `POST` | `/teams/create` | Create a new team |
+| `POST` | `/meetings/create` | Upload a new meeting archive |
+| `GET` | `/meetings/{id}` | Fetch specific meeting details |
 
+*For full API documentation, refer to the `/docs` directory.*
 
+---
 
-✹  Pull Request 제목 작성법
+## **🛠 Quality Assurance & Testing**
 
-이름_타입/#이슈번호 → 풀 시킬 브랜치 (ex. ehdrb01_style/#1 -> dev)
+To ensure high reliability, security, and performance, RAONz has undergone extensive quality assurance and testing.
+
+### **🔍 Testing Tools & Frameworks**
+| Tool | Purpose |
+|------|---------|
+| 🟢 **SonarQube** | Code quality analysis & security vulnerability detection |
+| 🟡 **JUnit** | Backend unit testing & validation |
+| 🔵 **Selenium** | UI automation testing for frontend components |
+| 🔴 **Jenkins** | Continuous integration & automated deployment |
+
+---
+
+### ✅ **Test Results & Analysis**
+
+#### **1️⃣ JUnit - Backend Unit Testing**
+✔ **100% pass rate on JUnit tests** _(except for database integration scenarios)_
+<br>
+<img src="https://github.com/user-attachments/assets/eeb710ce-6e2d-47eb-91f3-04afb58ecad4" width="70%">
+
+---
+
+#### **2️⃣ Selenium - UI Automation Testing**
+✔ **All test cases passed successfully**
+<br>
+<img src="https://github.com/user-attachments/assets/f243fa2e-5d3d-4d96-8821-e27070985735" width="70%">
+
+---
+
+#### **3️⃣ SonarQube - Code Quality & Security Analysis**
+✔ **No security vulnerabilities detected**
+✔ **A-grade maintainability & readability**
+<br>
+**[SonarQube Report]**
+<br>
+<img src="https://github.com/user-attachments/assets/d041a204-ca43-4dd8-8be1-2105b540dfcf" width="70%">
+
+---
+
+#### **4️⃣ FeeDat - Static Code Analysis**
+✔ **Zero critical bugs detected**
+<br>
+**[FeeDat Report]**
+<br>
+<img src="https://github.com/user-attachments/assets/4782728e-3a48-4d85-afc4-1898395233ba" width="70%">
+
+---
+
+By integrating these tools into our **CI/CD pipeline**, we ensure that the platform maintains **high-quality code, secure architecture, and stable performance** at all times.
+
+---
+
+## **🚀 Deployment & Setup**
+
+### **1️⃣ Clone the Repository**
+
+```bash
+git clone https://github.com/your-repo/RAONz.git
+cd RAONz
+```
+
+### **2️⃣ Backend Setup**
+
+```bash
+cd backend
+./mvnw spring-boot:run
+```
+
+### **3️⃣ Frontend Setup**
+
+```bash
+cd frontend
+npm install
+npm start
+```
+
+### **4️⃣ Database Setup**
+
+```bash
+mysql -u root -p
+CREATE DATABASE RAONz;
+```
+
+### **5️⃣ Access the Application**
+
+Visit **`raonz.netlify.app`** to explore the platform.
+
+---
+
+## **📌 Team Members**
+
+| Name | Role |
+| --- | --- |
+| **Seokjae Ma** | Project Manager |
+| **Donggyu Kim** | Scrum Master |
+| **Sechang Jang** | Documentation Manager |
+| **Junhyeok Choi** | Backend Developer |
+| **MinSeo Lee** | Frontend Developer |
+
+---
+
+## **🔍 Future Enhancements**
+
+✅ **AI-powered meeting transcription**.
+
+✅ **Real-time video integration for team meetings**.
+
+✅ **Mobile app version for cross-platform accessibility**.
+
+✅ **Advanced ranking and gamification features**.
+
+---
+
+## **📞 Contact & Contributions**
+
+💡 We welcome contributions! Please follow our Contributing Guide.
+
+📩 **Email:** `maasj7514@gmail.com`
+
+---
+
+### **🚀 Elevating Team Collaboration with RAONz!** 🎉
