@@ -200,7 +200,7 @@ CREATE DATABASE RAONz;
 
 ### **5️⃣ Access the Application**
 
-Visit **`raonz.netlify.app`** to explore the platform.
+Visit [**RAONz**](https://raonz.netlify.app) to explore the platform.
 
 ---
 
